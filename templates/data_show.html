@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+
+
+
+
+
+<script type ="text/javascript">
+    $(document).ready(function () {
+        $("#btnCreateHtmlTable").click(function () {
+            CreateHtmlTable();
+        });
+
+    });
+
+    function CreateHtmlTable() {
+        $("#ResultArea").html("");
+        var table = $("<table id=DynamicTable border=1></table>").appendTo("#ResultArea");
+
+        var rowHeader = $("<tr></tr>").appendTo(table);
+
+        $("<td></td>").text("Script CodeID").appendTo(rowHeader);
+        $("<td></td>").text("Script Name").appendTo(rowHeader);
+
+
+
+
+
+
+    }
+
+</script>
+
+
+
+
+
+
+
+
+
+<body>
+
+<table border="1">
+  <tr>
+    <th>Script Code</th>
+    <th>Script Name</th>
+  </tr>
+  <tr>
+    <td>{{ codes }}</td>
+    <td>{{names}}</td>
+  </tr>
+</table>
+
+
+    </body>
+</html>
